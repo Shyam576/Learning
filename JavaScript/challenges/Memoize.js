@@ -32,5 +32,5 @@ function memoize(fn){
     let k, r
     return fn.args === 1
     ? a => m.get(a) ?? (m.set(a, r=fn(a)),r)
-    : (a,b) => (k=(a & 0xffff) <<16 | (b & 0xffff), (m.get(k) ?? (m.set(k, r=fn(a,b),r)))
+    : (a,b) => (k=(a & 0xffff) <<16 | (b & 0xffff), (m.get(k) ?? (m.set(k, r=fn(a,b),r))))
 }
