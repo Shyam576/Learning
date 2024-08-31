@@ -20,7 +20,7 @@ To get started with the repository, follow these steps:
 
 1. **Clone the Repository**
 
-   ```bash
+```bash
    git clone https://github.com/your-username/learning-repo.git
 
 2. **Navigate to the Project Directory
