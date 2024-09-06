@@ -22,11 +22,11 @@ To get started with the repository, follow these steps:
 
 ```bash
    git clone https://github.com/your-username/learning-repo.git
-
-2. **Navigate to the Project Directory
+```
+2. **Navigate to the Project Directory**
     ```bash
-    cd learning-repo
-
+     cd learning-repo
+    ```
 ## Learning Goalds
 This repository aims to cover a wide range of topics, including but not limited to:
 1. JavaScript: Basics, ES6 features, high-order functions, asynchornous programming, etc.
