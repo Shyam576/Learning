@@ -17,15 +17,30 @@ var flat = function (arr, n) {
     function flattenHelper(subArray, currentDepth) {
         for (let element of subArray) {
             if (Array.isArray(element) && currentDepth < n) {
-                // Recursively flatten the element if it's an array and depth is less than n
                 flattenHelper(element, currentDepth + 1);
             } else {
-                // Otherwise, push the element into the result
                 result.push(element);
             }
         }
     }
 
-    flattenHelper(arr, 0); // Start flattening with depth 0
+    flattenHelper(arr, 0);
+    return result;
+};
+
+// Expert Solution
+var flat = function (arr, n) {
+    if(n === 0) {
+        return arr;
+    }
+    const result = [];
+    const iter = (item, deep = 0) => {
+        if (deep <= n) {
+            item.forEach((item) => Array.isArray(item) ? iter(item, deep + 1) : result.push(item));
+        } else {
+            result.push(item);
+        }
+    };
+    iter(arr);
     return result;
 };
